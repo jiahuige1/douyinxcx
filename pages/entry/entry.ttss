@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* 水平居中 */
+  justify-content: center;/* 垂直居中 */
+  height: 100vh;          /* 全屏高度 */
+}
+
+.group-input {
+  width: 80%;
+  height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.submit-button {
+  width: 80%;
+  height: 40px;
+  background-color: #1aad19;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}

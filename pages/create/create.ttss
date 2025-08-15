@@ -1,0 +1,26 @@
+/* 设置容器样式，使内容居中 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  height: 100vh;           /* 使容器高度占满视口 */
+}
+
+/* 设置随机字符串的样式 */
+.random-string {
+  font-size: 24px;         /* 字体大小 */
+  font-weight: bold;       /* 加粗 */
+  color: #000000;          /* 黑色 */
+  margin-bottom: 20px;     /* 与按钮的间距 */
+}
+
+/* 设置复制按钮的样式 */
+.copy-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #1aad19; /* 微信小程序标准绿色 */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}

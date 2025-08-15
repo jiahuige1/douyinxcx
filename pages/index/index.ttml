@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="title">欢迎使用会面功能</view>
+  <button class="btn" bindtap="createGroup">创建小组</button>
+  <button class="btn" bindtap="joinGroup">加入小组</button>
+</view>

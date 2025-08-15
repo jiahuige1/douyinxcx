@@ -1,0 +1,20 @@
+/* pages/direct/direct.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* 让容器占满整个屏幕高度 */
+  }
+  
+  .location-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* 这是最关键的样式 */
+  .meeting-map {
+    width: 80%; /* 地图宽度占满容器 */
+    height: 70vh; /* 地图高度占屏幕高度的 70% */
+  }
