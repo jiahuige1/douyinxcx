@@ -1,0 +1,62 @@
+/* /pages/index/index.ttss */
+.container {
+  padding: 20px;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.location-list {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+.empty-tip {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  padding: 40px 0;
+}
+.location-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.location-item:last-child {
+  border-bottom: none;
+}
+.item-address {
+  font-size: 15px;
+  color: #333;
+}
+.item-coords {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+.add-btn {
+  width: 100%;
+  background-color: #007aff;
+  color: white;
+}
+.info-card {
+  margin-top: 30rpx;
+  background-color: #f9f9f9;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.info-row {
+  display: flex;
+  padding: 10rpx 0;
+}
+.info-label {
+  color: #888;
+  width: 120rpx; /* 固定标签宽度，让冒号对齐 */
+}
+.info-value {
+  color: #333;
+  flex: 1;
+}

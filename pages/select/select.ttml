@@ -1,0 +1,53 @@
+<!--pages/selectLocation/selectLocation.ttml-->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <input
+      class="search-input"
+      placeholder="搜索地点"
+      value="{{searchKeyword}}"
+      bindinput="handleSearchInput"
+      bindconfirm="executeSearch"
+    />
+  </view>
+
+  <!-- 搜索结果列表 (只有当有搜索结果时才显示) -->
+  <view class="results-list" tt:if="{{searchResults.length > 0}}">
+    <view
+      class="result-item"
+      tt:for="{{searchResults}}"
+      tt:key="location"
+      data-item="{{item}}"
+      bindtap="selectSearchResult"
+    >
+      <view class="result-item-name">{{item.name}}</view>
+      <view class="result-item-address">{{item.address}}</view>
+    </view>
+  </view>
+
+  <!-- 地图容器 -->
+  <view class="map-container">
+    <map
+      id="myMap"
+      class="map"
+      longitude="{{longitude}}"
+      latitude="{{latitude}}"
+      scale="{{scale}}"
+      show-location
+      bindregionchange="onRegionChange"
+    ></map>
+
+    <!-- 屏幕中心的图标 -->
+    <image class="center-marker" src="/images/location_marker.png"></image>
+  </view>
+
+  <!-- 底部信息面板 -->
+  <view class="info-panel">
+    <view class="address-box">
+      <view class="address-text">{{currentAddress}}</view>
+    </view>
+    <button class="confirm-btn" bindtap="confirmLocation">选定此位置</button>
+  </view>
+  
+</view>
+

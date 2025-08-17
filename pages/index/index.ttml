@@ -1,0 +1,65 @@
+<!-- /pages/index/index.ttml -->
+<view class="container">
+  <view class="title">已选出发点列表</view>
+
+  <!-- 列表区域 -->
+  <view class="location-list">
+    <!-- 如果列表为空，显示提示 -->
+    <view tt:if="{{startPoints.length === 0}}" class="empty-tip">
+      暂无出发点，请点击下方按钮添加
+    </view>
+    
+    <!-- 使用 tt:for 循环渲染每一个出发点 -->
+    <view class="location-item" tt:for="{{startPoints}}" tt:key="index">
+      <view class="item-address">地址：{{item.address}}</view>
+      <view class="item-coords">经纬度：{{item.longitude}}, {{item.latitude}}</view>
+    </view>
+  </view>
+
+  <!-- 添加按钮 -->
+  <button class="add-btn" bindtap="goToSelectLocation">＋ 添加新的出发点</button>
+
+    <!-- 分割线 -->
+    <view class="divider"></view>
+  
+    <!-- 参数输入 -->
+    <view class="input-label">距离区间 (公里)</view>
+    <view class="distance-group">
+      <input type="digit" class="distance-input" placeholder="最小" bindinput="onMinDistanceInput"/>
+      <text class="separator">-</text>
+      <input type="digit" class="distance-input" placeholder="最大" bindinput="onMaxDistanceInput"/>
+    </view>
+  
+    <!-- 计算按钮 -->
+    <button class="calc-btn" bindtap="findMeetingCenter" disabled="{{startingPoints.length < 2}}">
+      开始计算中心点
+    </button>
+    
+    <!-- 结果展示 -->
+    <view class="result-wrapper" tt:if="{{centerPoint}}">
+      <view class="result-title">推荐碰面中心区域</view>
+      <map class="result-map" 
+        longitude="{{centerPoint.lon}}" 
+        latitude="{{centerPoint.lat}}"
+        scale="14"
+        markers="{{mapMarkers}}"
+      ></map>
+    </view>
+    <view class="info-card">
+      <view class="info-row">
+          <text class="info-label">地址：</text>
+          <text class="info-value">{{centerPoint.address}}</text>
+      </view>
+      <view class="info-row">
+        <text class="info-label">经度：</text>
+        <!-- 经度必须通过 centerPoint.lon 来访问 -->
+        <text class="info-value">{{centerPoint.lon.toFixed(6)}}</text>
+    </view>
+    <view class="info-row">
+        <text class="info-label">纬度：</text>
+        <!-- 纬度必须通过 centerPoint.lat 来访问 -->
+        <text class="info-value">{{centerPoint.lat.toFixed(6)}}</text>
+    </view>
+  </view>
+</view>
+</view>
