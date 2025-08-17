@@ -1,6 +1,0 @@
-<view class="container">
-  <input class="group-input" 
-         placeholder="输入小组编号" 
-         bindinput="onInput" />
-  <button class="submit-button" bindtap="submitGroupCode">提交</button>
-</view>

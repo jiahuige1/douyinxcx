@@ -1,3 +1,0 @@
-<view class="container">
-  <button class="location-btn" bindtap="sendLocation">发送当前位置信息</button>
-</view>

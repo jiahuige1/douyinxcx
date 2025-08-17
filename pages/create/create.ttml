@@ -1,4 +1,0 @@
-<view class="container">
-  <text class="random-string">{{randomString}}</text>
-  <button class="copy-button" bindtap="copyToClipboard">复制</button>
-</view>
